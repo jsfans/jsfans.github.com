@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+// 全局占位符
+// ==============================================
+
+
+// 清除浮动
+// ---------------------
+
+%clearfix {
+    *zoom:1;
+    &:before,
+    &:after {
+        display:table;
+        content:"";
+        // 修复 Opera/contenteditable 的 bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height:0;
+    }
+    &:after {
+        clear:both;
+    }
+}
+
+
+// 去除列表默认样式
+// ----------------
+
+%remove-list-default-style {
+    margin:0; padding:0; list-style:none;
+}

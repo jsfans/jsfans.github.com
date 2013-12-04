@@ -1,0 +1,123 @@
+@charset 'UTF-8';
+
+// 实用工具
+// ==============================================
+
+
+// 聚焦
+// ---------------------
+@mixin tab-focus() {
+    // 默认
+    outline:thin dotted #333;
+    // Webkit
+    outline:5px auto -webkit-focus-ring-color;
+    outline-offset:-2px;
+}
+
+
+// 过长文字显示省略号
+// $param 容器宽度
+// ---------------------
+
+@mixin text-overflow($width:100%) {
+    width:$width;
+    overflow:hidden;
+    word-wrap:normal;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+
+// border箭头
+// $color 箭头颜色
+// $width 箭头宽度
+// $direction 箭头方向
+// ---------------------
+
+@mixin border-arrow($color:#666, $width:10px, $direction:"down"){
+    width:0; height:0; font-size:0; overflow:hidden; border-width:$width;
+
+    @if $direction == "up" {
+        border-style:dashed dashed solid;
+        border-color:transparent transparent $color;
+    }
+    @else if $direction == "left" {
+        border-style:dashed solid dashed dashed;
+        border-color:transparent $color transparent transparent;
+    }
+    @else if $direction == "right" {
+        border-style:dashed dashed dashed solid;
+        border-color:transparent transparent transparent $color;
+    }
+    @else if $direction == "down" {
+        border-style:solid dashed dashed;
+        border-color:$color transparent transparent;
+    }
+    @else if $direction == "up-left" {
+        border-style:solid dashed dashed solid;
+        border-color:$color transparent transparent $color;
+    }
+    @else if $direction == "up-right" {
+        border-style:solid solid dashed dashed;
+        border-color:$color $color transparent transparent;
+    }
+    @else if $direction == "down-left" {
+        border-style:dashed dashed solid solid;
+        border-color:transparent transparent $color $color;
+    }
+    @else if $direction == "down-right" {
+        border-style:dashed solid solid dashed;
+        border-color:transparent $color $color transparent;
+    }
+}
+
+
+// CSS3 属性
+// --------------------------------------------------
+
+// 圆角边框
+@mixin border-radius($radius:5px) {
+  -webkit-border-radius:$radius;
+     -moz-border-radius:$radius;
+          border-radius:$radius;
+}
+
+// 投影
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow:$shadow;
+     -moz-box-shadow:$shadow;
+          box-shadow:$shadow;
+}
+
+// 文字投影
+@mixin text-shadow($shadow:1px 1px 0 #fff) {
+  -webkit-text-shadow:$shadow;
+     -moz-text-shadow:$shadow;
+          text-shadow:$shadow;
+}
+
+// 变换
+@mixin transition($transition:all .2s ease-in) {
+    -webkit-transition:$transition;
+       -moz-transition:$transition;
+         -o-transition:$transition;
+            transition:$transition;
+}
+
+// 变换
+@mixin transform($transform) {
+    -webkit-transform:$transform;
+       -moz-transform:$transform;
+        -ms-transform:$transform;
+         -o-transform:$transform;
+            transform:$transform;
+}
+
+@mixin transform-origin($origin:left top) {
+    -webkit-transform-origin:$origin;
+       -moz-transform-origin:$origin;
+        -ms-transform-origin:$origin;
+         -o-transform-origin:$origin;
+            transform-origin:$origin;
+}
+

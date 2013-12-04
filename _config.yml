@@ -1,3 +1,8 @@
 name: Your New Jekyll Site
-markdown: redcarpet
+markdown: rdiscount
 pygments: true
+encoding: UTF-8
+
+exclude: [config.rb, Gruntfile.js, package.json, sass, blog.sublime-project, blog.sublime-workspace, node_modules]
+
+permalink: none
