@@ -3,17 +3,14 @@ layout: default
 title: Your New Jekyll Site
 ---
 
-<section class="main">
-    <div class="inner">
-        <header class="heading">所有文章</header>
-        <ul class="posts">
-            {% for post in site.posts %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
-        {% for i in (1..50) %}
-        <p>aaa</p>
-        {% endfor %}
-    </div>
-</section>
+
+<header class="heading">所有文章</header>
+<ul class="posts">
+    {% for post in site.posts %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+{% for i in (1..50) %}
+<p>给你三扇门选择，一扇后面是车，另两扇后面是羊。你的目的是要得到车，但是却不能看到门后面的情况。有个坑爹大忽悠主持人让你第一次选择，在选择第一扇门之后，这个知道门后情况的大忽悠会打开另一扇门。当然为了收视率，这个大忽悠肯定会打开有一头羊的门。此时，这个主持坑告诉你有一次换的机会。那么：你是换还是不换？</p>
+{% endfor %}
 

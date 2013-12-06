@@ -18,15 +18,18 @@
         <h1 class="logo"><a href="#">Jsfans</a></h1>
         <nav class="main-nav">
             <ul>
-                <li><a href="#">修前端</a></li>
-                <li class="active"><a href="#">玩后端</a></li>
-                <li><a href="#">抄代码</a></li>
-                <li><a href="#">淘工具</a></li>
+                {% for item in site.navigation %}
+                <li{% if page.url contains item.alias | append '/' %} class="active"{% endif %}><a href="/{{ item.alias }}.html">{{ item.label }}</a></li>
+                {% endfor %}
             </ul>
         </nav>
     </header>
 
-    {{ content }}
+    <section class="main">
+        <div class="inner">
+            {{ content }}
+        </div>
+    </section>
 
     <section class="extra">
         <div class="inner">

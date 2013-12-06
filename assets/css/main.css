@@ -22,17 +22,35 @@ label, select, button, input[type="button"], input[type="reset"], input[type="su
 
 textarea { overflow: auto; vertical-align: top; }
 
-.the-header, .main-nav ul { *zoom: 1; }
-.the-header:before, .main-nav ul:before, .the-header:after, .main-nav ul:after { display: table; content: ""; line-height: 0; }
-.the-header:after, .main-nav ul:after { clear: both; }
+.the-header, .main-nav ul, .author { *zoom: 1; }
+.the-header:before, .main-nav ul:before, .author:before, .the-header:after, .main-nav ul:after, .author:after { display: table; content: ""; line-height: 0; }
+.the-header:after, .main-nav ul:after, .author:after { clear: both; }
 
 .the-header ul { margin: 0; padding: 0; list-style: none; }
+
+h1, h2, h3, h4, h5, h6 { font-family: consolas, monaco, monospace; }
+
+h1 { font-size: 3.2rem; margin-top: 0; margin-bottom: 3rem; }
+
+h2 { font-size: 2.8rem; margin-top: 0; margin-bottom: 1.5rem; }
+
+h3 { font-size: 2.4rem; margin-top: 0; margin-bottom: 1.5rem; }
+
+h4 { font-size: 1.8rem; margin-top: 0; margin-bottom: 1.5rem; }
+
+p, ul, ol, dl { margin-top: 0; margin-bottom: 2rem; }
+
+small, .small, aside { font-size: 1rem; }
+
+blockquote cite { font-weight: normal; }
 
 html, body { height: 100%; -webkit-font-smoothing: subpixel-antialiased; -webkit-text-size-adjust: none; }
 
 html { font-size: 62.5%; }
 
-body { margin: 0; padding: 0; background: #fff; font-size: 1.6rem; font-family: consolas, monaco, monospace; background: rgba(250, 250, 250, 0.95); }
+body { margin: 0; padding: 0; background: #fff; font-size: 1.6rem; font-family: consolas, monaco, monospace; background: rgba(250, 250, 250, 0.95); color: #40464f; }
+
+a { text-decoration: none; }
 
 .the-header { background: #40464f; }
 .the-header a { -webkit-transition: 0.4s; -moz-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s; }
@@ -45,17 +63,46 @@ body { margin: 0; padding: 0; background: #fff; font-size: 1.6rem; font-family: 
 .main-nav li a { display: block; color: #fff; text-decoration: none; font-size: 1.8rem; border: 1px solid #4a5059; border-width: 0 0 0 1px; padding: 20px 40px; }
 .main-nav .active a, .main-nav .active a:hover { background: #f05151; }
 
-.main .inner { padding: 40px 50px; background: #fff; -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
-.main .heading { padding-bottom: 10px; border-bottom: 6px solid #f05151; color: #f05151; font-size: 36px; }
+.main a:link { color: #25b6a1; border-bottom: 1px dashed #9ac9c2; }
+.main a:visited { color: #7cada6; }
+.main a:hover { color: #25b6a1; border-bottom-style: solid; }
+.main .inner { padding: 40px 50px 50px; background: #fff; -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); }
+.main .heading { line-height: 1.2em; padding-bottom: 5px; border-bottom: 6px solid #f05151; color: #f05151; font-size: 32px; margin-bottom: 3rem; }
 
 .extra .inner { padding: 30px; }
+
+.post { margin-bottom: 5rem; }
+.post p, .post ul, .post ol { line-height: 2; font-size: 1.6rem; }
+.post ul { padding-left: 1.5rem; list-style-type: square; }
+.post ol { padding-left: 2.7rem; }
+
+.meta { border-top: 6px solid #ddd; padding-top: 2rem; margin-bottom: 2rem; }
+.meta p { margin-bottom: 1rem; }
+.meta a { margin-right: 1rem; }
+
+.author { background: #f3f3f3; padding: 2rem; }
+.author .avatar { float: left; margin-right: 2rem; }
+.author .avatar a { border: none; }
+.author .avatar img { display: block; }
+.author .info p { margin-bottom: 1rem; }
+
+blockquote { margin: 0 0 3rem; padding: 1rem 3rem; border-left: 6px solid #e3e3e3; background: #f8f8f8; color: #999; }
+blockquote p:last-child { margin: 0; }
+
+pre, code { font-family: consolas, monaco, monospace; }
+
+p code { background: #f3f3f3; border: 1px solid #e3e3e3; padding: 5px 10px; margin: 0 5px; white-space: nowrap; }
+
+.highlight { background: #f3f3f3; border: 1px solid #e3e3e3; padding: 2rem; margin-bottom: 3rem; font-size: 16px; line-height: 2; overflow-x: auto; }
+.highlight pre { margin: 0; }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) { .the-header .logo { width: 100%; }
   .the-header .logo a { padding: 50px; font-size: 3.6rem; }
   .main-nav ul { width: 100%; }
   .main-nav li { width: 100%; }
   .main-nav li a { border-width: 1px 0 0; }
-  .main .inner { padding: 30px 10px; } }
+  .main .inner { padding: 30px 10px; }
+  .main .heading { font-size: 3rem; } }
 @media only screen and (min-width: 768px) { body { padding-top: 62px; }
   .the-header { position: fixed; left: 0; top: 0; width: 100%; z-index: 1; } }
 @media only screen and (min-width: 1024px) { .main { float: left; width: 100%; height: 100%; margin-right: -360px; }
