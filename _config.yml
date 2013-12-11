@@ -14,13 +14,3 @@ navigation:
     alias: snippets
   - label: 鼓捣工具
     alias: tools
-
-authors:
-  - name: Seishi
-    description: "A son, a husband and a father"
-    email: shengzhizhang@gmail.com
-    avatar: https://0.gravatar.com/avatar/504b3a55eec7dc228393c0cf8172fc73?d=https%3A%2F%2Fidenticons.github.com%2F4337735792ff12d2ef2cb5dc9e8588a4.png
-  - name: ideaspace
-    description: "A guy who loves the Kungfu Panda :D"
-    email: ideaspace@126.com
-    avatar: https://0.gravatar.com/avatar/68e9b46c69ffdeeae1e7fea66227affc?d=https%3A%2F%2Fidenticons.github.com%2Fb5086f7ddc48d140eb5fb64ed21d6279.png
